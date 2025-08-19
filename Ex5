@@ -1,0 +1,68 @@
+package ExerciciosAPS;
+
+public class Ex5 {
+
+	public static void main(String[] args) {
+
+		int[] [] matriz = {
+				           {39, 80, 100}, 
+						   {60, 50, 40},
+						   {90, 80, 70}};
+		
+		int tamMatriz = matriz.length;
+		
+		for (int i = 0; i<tamMatriz; i++) {
+			
+			
+			
+			 double media = ordena(matriz[i].length, matriz[i]);
+			
+			System.out.printf("Media do aluno "+ (i+1) + ": " + media);
+			 System.out.println(); 
+		}
+		
+		
+		for (int i = 0; i < tamMatriz; i++) {
+			
+            for (int j = 0; j < matriz[i].length; j++) {
+            	
+                System.out.print(matriz[i][j] + " "); 
+            }
+            
+            System.out.println(); 
+        }
+    }
+	
+
+	
+	public static double ordena (int tam, int vet []) {
+		
+		double media = 0;
+		
+		for (int i = 0; i<tam-1; i++) {
+				
+			for (int j = 0; j<tam-1; j++) {
+				
+				media = media + vet [j];
+				
+				if (vet[j]>vet[j+1]) {
+					
+					int aux = vet[j];
+					
+					vet[j]= vet [j+1];
+					
+					vet [j+1] = aux;
+					
+					
+					
+				
+				}
+				
+			}	
+			
+			
+		}
+		
+		return media/tam;
+	}
+}
