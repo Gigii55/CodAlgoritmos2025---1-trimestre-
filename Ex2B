@@ -1,0 +1,43 @@
+package ExerciciosAPS;
+
+public class Ex1C {
+
+	public static void main(String[] args) {
+		
+		int [] vet = {3, 4, 9, 2, 5, 8, 2, 1, 7};
+		
+		ordenaInsert(vet);
+		
+		for (int i = 0; i<vet.length; i++) {
+			
+			System.out.println(vet[i] + " ");		}
+			
+		}
+	
+	public static void ordenaInsert (int vet[]) {
+		
+	
+		for (int i = 1; i < vet.length; i++) {
+			
+		
+            int key = vet[i];
+            
+            int j = i - 1;
+            
+            while (j >= 0 && vet[j] > key) {
+            
+                vet[j + 1] = vet[j];
+                
+                j = j - 1;
+                
+            }
+
+		
+            vet[j + 1] = key;
+		
+	}
+
+	}
+	}
+
+
