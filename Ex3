@@ -1,0 +1,55 @@
+package ExerciciosAPS;
+
+import java.util.Scanner;
+
+public class Ex3 {
+
+	public static void main(String[] args) {
+	
+		Scanner scanner = new Scanner (System.in);
+		
+		
+		System.out.println ("digite o tamanho do vetor");
+		int tam = scanner.nextInt();
+		scanner.nextLine();
+		
+		 int[] vet = new int[tam];
+		
+		for (int i = 0; i<tam; i++) {
+			
+			System.out.println ("digite o numero do espaço " + i);
+			vet [i] = scanner.nextInt();
+			
+		}
+		
+		System.out.println ("Deseja ordenar até qual indice?");
+		int indice = scanner.nextInt();
+		
+		
+		if (indice<=vet.length &&  indice>0){
+		ordena(indice,vet);	
+		}
+		else {
+			
+		System.out.println("Valor maior que o numero de indices!!!");
+		}
+		for (int j = 0; j<tam; j++) {
+			
+			System.out.println (vet[j] + " ");
+		}
+	}
+	
+
+	public static void ordena (int tam, int vet []) {
+			
+		for (int i = 0; i < tam; i++) {
+		    for (int j = 0; j < tam - i - 1; j++) {
+		        if (vet[j] > vet[j + 1]) {
+		            int aux = vet[j];
+		            vet[j] = vet[j + 1];
+		            vet[j + 1] = aux;
+		        }
+		    }
+		}
+}
+}
