@@ -1,0 +1,51 @@
+package ExerciciosAPS;
+
+import java.util.Arrays;
+
+public class Ex7 {
+
+	public static void main(String[] args) {
+		
+		
+		        Paciente[] pacientes = {
+		            new Paciente("João", 3, 5),
+		            new Paciente("Maria", 3, 10),
+		            new Paciente("Lucas", 5, 2)
+		        };
+
+		        	Paciente maiorTempo = pacientes[0];
+
+		        	for (int i = 0; i<pacientes.length; i++) {
+		        		
+		        		System.out.println(pacientes[i]);
+		       
+		        		if (pacientes[i].tempo > maiorTempo.tempo) {
+		        			
+		        	        maiorTempo = pacientes[i];
+		        	    }
+		        	}
+
+		        	System.out.println("Paciente com maior tempo é: " + maiorTempo.nome);
+		    }
+		}
+
+		class Paciente {
+		    String nome;
+		    int gravidade;
+		    int tempo;
+
+		    
+		    public Paciente(String nome, int gravidade, int tempo) {
+		    	
+		        this.nome = nome;
+		        this.gravidade = gravidade;
+		        this.tempo = tempo;
+		        
+		    }
+		    
+		   
+		
+		}
+
+
+	
