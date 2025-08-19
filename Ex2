@@ -1,0 +1,42 @@
+package ExerciciosAPS;
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+		
+		int [] vet = {3, 0, -2, 5, 8};
+		int tam = vet.length;
+		
+		ordena(tam,vet);
+		
+		for (int i = 0; i<tam-1;i++) {
+			
+			System.out.println (vet[i]+ " ");
+			
+		}
+	
+	}
+
+	
+	public static void ordena (int tam, int vet []) {
+		
+		for (int i = 0; i<tam-1; i++) {
+			
+			for (int j = 0; j<tam-1; j++) {
+				
+				if (vet[j]<vet[j+1]) {
+					
+					int aux = vet[j];
+					
+					vet[j]= vet [j+1];
+					
+					vet [j+1] = aux;
+				
+				}
+				
+			}		
+		}
+		
+		
+	}
+}
