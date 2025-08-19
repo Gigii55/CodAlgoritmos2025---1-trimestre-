@@ -1,0 +1,39 @@
+package ExerciciosAPS;
+
+import java.util.Scanner;
+
+public class Ex4 {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Digite o número de indices do vetor= ");
+        int indices = scanner.nextInt();
+        scanner.nextLine();  
+
+        String[] vetor = new String[indices];
+
+        for (int i = 0; i < indices; i++) {
+        	
+            System.out.print("Digite a string " + (i + 1) + ": ");
+            vetor[i] = scanner.nextLine();
+        }
+
+        for (int i = 0; i < indices - 1; i++) {
+        	
+            for (int j = 0; j < indices - 1; j++) {
+            	
+                if (vetor[j].compareTo(vetor[j + 1]) > 0) {
+                	
+                    String aux = vetor[j];
+                    vetor[j] = vetor[j + 1];
+                    vetor[j + 1] = aux;
+                }
+            }
+        } 
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.print(vetor[i] + " ");
+        }
+        System.out.println();
+    }
+}
